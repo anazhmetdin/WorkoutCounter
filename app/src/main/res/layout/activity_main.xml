@@ -11,25 +11,28 @@
         android:id="@+id/purpose"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:paddingTop="20dp"
         android:text="@string/purpose"
-        android:textSize="20sp"
         android:textColor="@color/colorAccent"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.022" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/HMSets"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:paddingTop="20dp"
         android:text="@string/HMSets"
-        android:textSize="20sp"
         android:textColor="@color/colorAccent"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -37,22 +40,69 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/purpose"
-        app:layout_constraintVertical_bias="0.068" />
+        app:layout_constraintVertical_bias="0.0" />
+
+    <RelativeLayout
+        android:id="@+id/counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/timeOrReps"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/HMSets">
+
+        <Button
+            android:id="@+id/minus"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorAccent"
+            android:text="@string/minus"
+            android:textColor="@color/colorDark"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/sets"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/minus"
+            android:autofillHints="@string/start"
+            android:hint="@string/start"
+            android:inputType="number"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="@string/start"
+            android:textColor="@color/colorAccent"
+            android:textSize="20sp">
+
+            <requestFocus />
+        </EditText>
+
+        <Button
+            android:id="@+id/plus"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@id/sets"
+            android:background="@color/colorAccent"
+            android:text="@string/plus"
+            android:textColor="@color/colorDark"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
 
     <TextView
         android:id="@+id/timeOrReps"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:paddingTop="20dp"
         android:text="@string/timeOrReps"
-        android:textSize="20sp"
         android:textColor="@color/colorAccent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="20sp"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/HMSets"
-        app:layout_constraintVertical_bias="0.068" />
+        app:layout_constraintTop_toBottomOf="@+id/counter" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

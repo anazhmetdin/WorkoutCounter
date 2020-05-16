@@ -1,6 +1,11 @@
 <resources>
     <string name="app_name">Workout counter</string>
     <string name="purpose">Counting your super duper awesome reps</string>
-    <string name="HMSets">How many sets?</string>
-    <string name="timeOrReps">You will do sets of:</string>
+    <string name="HMSets">Sets?</string>
+    <string name="timeOrReps">Reps:</string>
+    <string name="rest">Rest period:</string>
+    <string name="rep">Rep timer:</string>
+    <string name="start">1</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
 </resources>
